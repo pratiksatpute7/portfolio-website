@@ -1,0 +1,101 @@
+/* CONTACT ME SECTION */
+.contact-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .contact-card {
+        max-width: 50%;
+        margin:  auto; /* Centers the card & provides spacing */
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background: #f8f9fa; /* Light background to improve readability */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      
+    //   /* Hover Effect */
+    //   .contact-card:hover {
+    //     transform: scale(1.02);
+    //     box-shadow: 0 12px 35px` rgba(0, 0, 0, 0.15);
+    //   }
+      
+      /* Description Text */
+      .contact-description {
+        font-size: 1rem;
+        color: #333; /* Improved readability */
+        margin-bottom: 20px;
+      }
+      
+      /* FORM STYLING */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center; /* Center fields properly */
+      }
+      
+      /* FORM FIELDS */
+      mat-form-field {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+      }
+      
+      /* FORM FIELD LABEL */
+      mat-label {
+        font-weight: 500;
+        color: #555;
+      }
+      
+      /* SEND MESSAGE BUTTON - FIXED */
+      .send-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        margin-top: 15px;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+      
+      /* Hover Effect */
+      .send-btn:hover {
+        background: linear-gradient(135deg, #0056b3, #004085);
+        box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+        transform: scale(1.05);
+      }
+      
+      /* BUTTON ICON */
+      .send-btn mat-icon {
+        font-size: 20px;
+      }
+      
+      /* FOOTER SPACING */
+      footer {
+        margin-top: 50px;
+      }
+      
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 600px) {
+        .contact-card {
+          width: 90%;
+          padding: 25px;
+        }
+      
+        .send-btn {
+          width: auto;
+          padding: 10px 15px;
+        }
+      }
+      
+}

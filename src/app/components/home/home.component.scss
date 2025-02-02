@@ -1,0 +1,30 @@
+/* General Styles */
+.home-container {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  overflow: visible;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.home-hero-container {
+  width: 100%;
+}
+
+/* About Section */
+.home-about-container {
+  // display: flex;
+  // justify-content: center;
+  width: 100%;
+}
+
+.home-work-container, .home-education-container {
+  // width: 100%;
+  // display: flex;
+  // justify-content: center;
+}

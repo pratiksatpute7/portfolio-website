@@ -1,0 +1,33 @@
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #0D1117; /* Matches navbar */
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 40px; /* Adds spacing from the last section */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Divider between text */
+  .divider {
+    color: #FFC107; /* Gold color matching navbar active links */
+  }
+  
+  /* Heart Emoji Styling */
+  .footer-content strong {
+    font-weight: 500;
+    color: #FFC107; /* Gold accent */
+  }
+  

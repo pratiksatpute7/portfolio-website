@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="toolbar">
+  <!-- Mobile Menu Button -->
+  <button mat-icon-button (click)="toggleSidenav()" class="menu-button" aria-label="Open Navigation">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Portfolio Title -->
+  <!-- <span class="title">My Portfolio</span> -->
+
+  <span class="spacer"></span>
+
+  <!-- Desktop Navigation -->
+  <div class="nav-buttons">
+    <button mat-button routerLink="/home" routerLinkActive="active-link">Home</button>
+    <button mat-button routerLink="/projects" routerLinkActive="active-link">Projects</button>
+    <button mat-button routerLink="/contact" routerLinkActive="active-link">Contact</button>
+  </div>
+</mat-toolbar>
+
+<!-- Sidenav Container -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer mode="over" class="sidenav" [class.open]="sidenavOpened">
+    <button mat-icon-button (click)="toggleSidenav()" class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <nav class="sidenav-links">
+      <button mat-button routerLink="/home" (click)="closeSidenav()">Home</button>
+      <button mat-button routerLink="/about" (click)="closeSidenav()">About</button>
+      <button mat-button routerLink="/projects" (click)="closeSidenav()">Projects</button>
+      <button mat-button routerLink="/contact" (click)="closeSidenav()">Contact</button>
+    </nav>
+  </mat-sidenav>
+</mat-sidenav-container>

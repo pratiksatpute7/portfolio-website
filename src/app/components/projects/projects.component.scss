@@ -1,0 +1,141 @@
+.projects-container {
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 100vh; 
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  .view-action{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 50px; 
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    min-height: 300px; 
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .project-image {
+    width: 100px; 
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #212529;
+    margin: 10px 0;
+  }
+  
+  
+  .short-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .tech-icon {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.2);
+  }
+  
+.project-details {
+  text-align: left; 
+  padding-left: 20px; 
+  margin-top: 10px;
+}
+
+
+.project-details li {
+  list-style-type: disc; 
+  margin-bottom: 5px; 
+  font-size: 1rem;
+  color: #444;
+}
+  
+  
+  .view-btn {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(255, 64, 129, 0.3);
+    width: 50%;
+  }
+  
+  .view-btn:hover {
+    background: linear-gradient(90deg, #ff80ab, #ff4081);
+    box-shadow: 0px 6px 12px rgba(255, 64, 129, 0.5);
+    transform: scale(1.05);
+  }
+  
+  
+  footer {
+    margin-top: 50px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .tech-icons {
+      justify-content: center;
+    }
+  }
+  

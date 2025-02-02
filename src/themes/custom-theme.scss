@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+// Define custom colors
+$custom-primary: mat.define-palette(mat.$blue-grey-palette, 900);
+$custom-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+// Define the custom theme
+$custom-theme: mat.define-dark-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Apply the theme globally
+@include mat.all-component-themes($custom-theme);
+body {
+  background-color: #f5f6fa; /* Soft grey */
+}

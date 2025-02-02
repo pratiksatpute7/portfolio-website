@@ -1,0 +1,22 @@
+<section class="work-experience">
+  <div class="work-container">
+
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline">
+      <div *ngFor="let work of workExperience; let i = index" 
+           class="timeline-item" 
+           [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+        
+        <div class="timeline-icon" [ngStyle]="{'background-color': work.color}">
+          <mat-icon>{{ work.icon }}</mat-icon>
+        </div>
+        
+        <div class="timeline-content">
+          <h3>{{ work.role }}</h3>
+          <p class="company">{{ work.company }} ({{ work.duration }})</p>
+          <p>{{ work.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

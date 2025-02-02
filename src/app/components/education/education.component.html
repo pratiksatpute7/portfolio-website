@@ -1,0 +1,22 @@
+<section class="education">
+  <div class="education-container">
+
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div *ngFor="let edu of education; let i = index" 
+           class="timeline-item" 
+           [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+        
+        <div class="timeline-icon" [ngStyle]="{'background-color': edu.color}">
+          <mat-icon>school</mat-icon>
+        </div>
+  
+        <div class="timeline-content">
+          <h3>{{ edu.degree }}</h3>
+          <p class="institution">{{ edu.institution }} ({{ edu.year }})</p>
+          <p>{{ edu.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

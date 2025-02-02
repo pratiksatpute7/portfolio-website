@@ -1,0 +1,28 @@
+<div class="contact-container fade-in">
+  <mat-card class="contact-card">
+    <h2>Contact Me</h2>
+    <p class="contact-description">
+      Feel free to reach out! Whether you have a question, project idea, or just want to connect, I'd love to hear from you.
+    </p>
+    <form class="contact-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="4" required></textarea>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" class="send-btn">
+        <mat-icon>send</mat-icon> Send Message
+      </button>
+    </form>
+  </mat-card>
+</div>

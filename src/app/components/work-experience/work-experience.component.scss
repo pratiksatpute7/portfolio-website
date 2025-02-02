@@ -1,0 +1,183 @@
+.work-container {
+  // width: 80%;
+  // display: flex;
+  // align-items: flex-start;
+  gap: 40px;
+  // background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  // border-radius: 20px;
+  // box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.1);
+  // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+/* WORK EXPERIENCE SECTION */
+.work-experience {
+  text-align: center;
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 80px;
+  color: #222;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  // width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 80px;
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Alternating Layout */
+.timeline-item.left {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.right {
+  flex-direction: row;
+}
+
+/* TIMELINE ICON */
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: -40px; /* Positions it above the card */
+  transform: translateX(-50%);
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Icon */
+.timeline-item:hover .timeline-icon {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* TIMELINE CONTENT - Increased Width */
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 70%; /* Increased width from 45% to 60% */
+  // max-width: 700px; /* Adjusted for better readability */
+  font-size: 1.1rem;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  padding-top: 50px;
+}
+
+/* Left & Right Borders for Alternating Effect */
+.timeline-item.left .timeline-content {
+  margin-right: 10px;
+  border-left: 5px solid #007acc;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 10px;
+  border-left: 5px solid #ff9800;
+}
+
+/* Hover Effect on Content */
+.timeline-item:hover .timeline-content {
+  transform: scale(1.05);
+}
+
+/* COMPANY NAME */
+.company {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* CONNECTOR CIRCLE */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  z-index: 2;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .timeline {
+    max-width: 600px;
+  }
+  .timeline::before {
+    left: 50%;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    flex-direction: column;
+  }
+
+  .timeline-icon {
+    left: 45%;
+    transform: none;
+  }
+
+  .timeline-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .timeline-item::after {
+    left: 50%;
+    transform: none;
+  }
+}
