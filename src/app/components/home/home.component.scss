@@ -1,30 +1,41 @@
-/* General Styles */
 .home-container {
-  margin-top: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 100px;
-  min-height: 100vh;
-  overflow: visible;
-  font-family: 'Poppins', sans-serif;
+  margin-top: 72px;
+  padding-bottom: 5rem;
 }
 
-/* Hero Section */
 .home-hero-container {
-  width: 100%;
+  min-height: calc(100dvh - 72px);
 }
 
-/* About Section */
+.home-section {
+  margin-top: 3rem;
+}
+
 .home-about-container {
-  // display: flex;
-  // justify-content: center;
-  width: 100%;
+  margin-top: 1rem;
 }
 
-.home-work-container, .home-education-container {
-  // width: 100%;
-  // display: flex;
-  // justify-content: center;
+@media (max-width: 900px) {
+  .home-container {
+    margin-top: 68px;
+    padding-bottom: 4rem;
+  }
+
+  .home-hero-container {
+    min-height: calc(100dvh - 68px);
+  }
+
+  .home-section {
+    margin-top: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    padding-bottom: 3rem;
+  }
+
+  .home-section {
+    margin-top: 1.7rem;
+  }
 }

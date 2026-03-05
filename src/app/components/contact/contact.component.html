@@ -1,28 +1,37 @@
-<div class="contact-container fade-in">
+<section class="contact-container section-shell fade-in">
   <mat-card class="contact-card">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact</h2>
     <p class="contact-description">
-      Feel free to reach out! Whether you have a question, project idea, or just want to connect, I'd love to hear from you.
+      Reach out for collaboration, engineering opportunities, or just to talk about building useful products.
     </p>
-    <form class="contact-form">
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/pratik-satpute" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/pratiksatpute7" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:pvsatput@syr.edu">Email</a>
+      <a href="tel:+13158320677">+1 (315) 832-0677</a>
+    </div>
+
+    <form class="contact-form" (submit)="$event.preventDefault()">
       <mat-form-field appearance="outline">
         <mat-label>Name</mat-label>
         <input matInput required>
       </mat-form-field>
-  
+
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput type="email" required>
       </mat-form-field>
-  
+
       <mat-form-field appearance="outline">
         <mat-label>Message</mat-label>
         <textarea matInput rows="4" required></textarea>
       </mat-form-field>
-  
-      <button mat-raised-button color="primary" class="send-btn">
-        <mat-icon>send</mat-icon> Send Message
+
+      <button type="submit" mat-raised-button class="send-btn">
+        <mat-icon>send</mat-icon>
+        Send Message
       </button>
     </form>
   </mat-card>
-</div>
+</section>

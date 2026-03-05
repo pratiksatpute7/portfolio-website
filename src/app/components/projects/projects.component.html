@@ -1,31 +1,43 @@
-<div class="projects-container fade-in">
-  <h2 class="title">My Projects</h2>
+<section class="projects-container section-shell fade-in">
+  <header class="projects-header">
+    <h2 class="section-title">Selected Projects</h2>
+    <p class="section-subtitle">Hands-on work spanning full-stack engineering, machine learning, distributed systems, and developer tooling.</p>
+  </header>
+
   <div class="projects-grid">
     <mat-card *ngFor="let project of projects" class="project-card">
       <mat-card-header>
-        <img [src]="project.image" alt="{{ project.name }}" class="project-image"/>
+        <img [src]="project.image" [alt]="project.name" class="project-image">
       </mat-card-header>
 
       <mat-card-content>
         <h3 class="project-title">{{ project.name }}</h3>
         <p class="short-description">{{ project.shortDescription }}</p>
-        
-        <!-- Tech Stack Icons -->
+
         <div class="tech-icons">
-          <img *ngFor="let icon of project.techIcons" [src]="icon" alt="Tech Icon" class="tech-icon"/>
+          <img *ngFor="let icon of project.techIcons" [src]="icon" alt="Technology icon" class="tech-icon">
         </div>
 
-        <!-- Project Details -->
         <ul class="project-details">
           <li *ngFor="let detail of project.details">{{ detail }}</li>
         </ul>
       </mat-card-content>
-      
+
       <mat-card-actions>
-        <div class="view-action">
-          <button mat-button color="accent" class="view-btn">🔗 View</button>
-        </div>
+        <a
+          *ngIf="project.repoLink; else noRepo"
+          class="view-btn"
+          [href]="project.repoLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Repository
+        </a>
+
+        <ng-template #noRepo>
+          <span class="view-btn disabled">Private / Demo Not Available</span>
+        </ng-template>
       </mat-card-actions>
     </mat-card>
   </div>
-</div>
+</section>

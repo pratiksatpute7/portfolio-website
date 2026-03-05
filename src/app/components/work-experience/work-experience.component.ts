@@ -11,27 +11,35 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class WorkExperienceComponent {
   workExperience = [
-    { 
-      role: "Software Engineer", 
-      company: "Govsphere, Inc.", 
-      duration: "Jan 2025 – Present", 
-      description: "Developing Next Gen Vital Apps, a cross-platform mobile healthcare application for monitoring vitals, recovery, and rehabilitation. Migrating systems from .NET 3.0 to .NET 8.0, improving scalability, performance, and maintainability.",
-      icon: "developer_mode",
+    {
+      role: "Software Developer",
+      company: "London Stock Exchange Group (LSEG), New York, NY",
+      duration: "Nov 2025 - Present",
+      description: "Improving traceability, reliability, and performance of high-QPS quantitative pricing services. Driving production engineering, root-cause analysis, and observability with Datadog across distributed systems in a low-latency environment.",
+      icon: "query_stats",
       color: "#ff9800"
     },
-    { 
-      role: "Software Engineer - Machine Learning", 
-      company: "iConsult Collaborative", 
-      duration: "Nov 2024 – Present", 
-      description: "Collaborated with the City of Syracuse on a data-driven urban project to enhance traffic control and flood prediction using 1,500 sensors in traffic signals and near waterfalls.",
-      icon: "data_usage",
+    {
+      role: "Software Engineer - Research Intern",
+      company: "Syracuse University, New York, NY",
+      duration: "Oct 2025 - Nov 2025",
+      description: "Designed a RAG-based healthcare self-triage chatbot architecture using LLMs and public medical sources. Built a Python prototype with Flask and LangChain for grounded, explainable responses.",
+      icon: "biotech",
+      color: "#2a9d8f"
+    },
+    {
+      role: "Software Engineer Intern",
+      company: "Govsphere Inc, Syracuse, NY",
+      duration: "Jan 2025 - Sept 2025",
+      description: "Built REST APIs in ASP.NET Core and TypeScript services with pagination, versioning, secure authentication, and structured error handling. Contributed to .NET 8 migration and delivered React Native apps for real-time patient workflows.",
+      icon: "developer_mode",
       color: "#007acc"
     },
-    { 
-      role: "Senior Software Engineer", 
-      company: "Zeus Learning", 
-      duration: "Jul 2020 - Jul 2023", 
-      description: "Built scalable REST APIs in .NET Core with Microservices Architecture, reducing errors by 30%, enhancing system resilience. Developed responsive front-end components with Angular and Typescript.",
+    {
+      role: "Senior Software Engineer",
+      company: "Zeus Learning, Mumbai, India",
+      duration: "Jul 2020 - Jul 2023",
+      description: "Architected modular .NET APIs and JWT-based SSO, built event-driven services using RabbitMQ and Redis, and optimized performance with JMeter and dotTrace to reduce API latency by 40%.",
       icon: "code",
       color: "#ff5722"
     }

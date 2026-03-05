@@ -1,19 +1,23 @@
-<div class="hero">
-    <div class="hero-bg"></div> <!-- Dynamic Background -->
-    <div class="hero-overlay"></div> <!-- Gradient Overlay -->
-  
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Pratik Satpute</span></h1>
-      <h2 class="typing">{{ dynamicText }}</h2>
-      <p>
-        Passionate about building modern web applications with 
-        <span class="highlight">Angular</span>, <span class="highlight">TypeScript</span>, and more!
-      </p>
-  
-      <div class="buttons action-buttons">
-        <button mat-raised-button color="primary" routerLink="/projects" class="cta">View Projects</button>
-        <button mat-stroked-button color="accent" routerLink="/contact" class="cta-alt">Contact Me</button>
-      </div>
+<section class="hero">
+  <div class="hero-bg-shape shape-one"></div>
+  <div class="hero-bg-shape shape-two"></div>
+
+  <div class="hero-content section-shell fade-in">
+    <p class="eyebrow">Software Developer | Full Stack | Cloud</p>
+    <h1>
+      Building resilient digital products
+      <span class="highlight">for real-world impact</span>
+    </h1>
+    <h2 class="typing">{{ dynamicText }}</h2>
+    <p class="intro">
+      I build high-throughput and reliable systems with .NET, Java, TypeScript, React, Angular, AWS, and Azure.
+    </p>
+
+    <div class="action-buttons">
+      <button mat-raised-button routerLink="/projects" class="cta">View Projects</button>
+      <button mat-stroked-button routerLink="/contact" class="cta-alt">Contact Me</button>
     </div>
+
+    <div class="hero-footnote">Currently working on quantitative pricing and market data systems at LSEG in New York.</div>
   </div>
-  
+</section>

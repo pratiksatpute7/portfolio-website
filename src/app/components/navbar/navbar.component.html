@@ -1,32 +1,30 @@
-<mat-toolbar color="primary" class="toolbar">
-  <!-- Mobile Menu Button -->
-  <button mat-icon-button (click)="toggleSidenav()" class="menu-button" aria-label="Open Navigation">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <!-- Portfolio Title -->
-  <!-- <span class="title">My Portfolio</span> -->
+<mat-toolbar class="toolbar">
+  <a class="brand" routerLink="/" aria-label="Go to home">
+    <span class="brand-mark">PS</span>
+    <span class="brand-name">Pratik Satpute</span>
+  </a>
 
   <span class="spacer"></span>
 
-  <!-- Desktop Navigation -->
   <div class="nav-buttons">
-    <button mat-button routerLink="/home" routerLinkActive="active-link">Home</button>
+    <button mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</button>
     <button mat-button routerLink="/projects" routerLinkActive="active-link">Projects</button>
     <button mat-button routerLink="/contact" routerLinkActive="active-link">Contact</button>
   </div>
+
+  <button mat-icon-button (click)="toggleSidenav()" class="menu-button" aria-label="Open navigation">
+    <mat-icon>menu</mat-icon>
+  </button>
 </mat-toolbar>
 
-<!-- Sidenav Container -->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer mode="over" class="sidenav" [class.open]="sidenavOpened">
-    <button mat-icon-button (click)="toggleSidenav()" class="close-button">
+  <mat-sidenav class="sidenav" mode="over" [opened]="sidenavOpened" (closedStart)="closeSidenav()">
+    <button mat-icon-button (click)="closeSidenav()" class="close-button" aria-label="Close navigation">
       <mat-icon>close</mat-icon>
     </button>
 
     <nav class="sidenav-links">
-      <button mat-button routerLink="/home" (click)="closeSidenav()">Home</button>
-      <button mat-button routerLink="/about" (click)="closeSidenav()">About</button>
+      <button mat-button routerLink="/" (click)="closeSidenav()">Home</button>
       <button mat-button routerLink="/projects" (click)="closeSidenav()">Projects</button>
       <button mat-button routerLink="/contact" (click)="closeSidenav()">Contact</button>
     </nav>

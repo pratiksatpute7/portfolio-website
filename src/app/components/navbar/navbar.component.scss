@@ -1,132 +1,171 @@
-/* NAVBAR (Top Toolbar) */
 .toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  padding: 0 24px;
-  height: 64px;
-  background-color: #0D1117; /* Modern Dark Theme */
-  color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+  height: 72px;
+  color: #f8fbff;
+  background: rgba(7, 13, 26, 0.8);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
-/* Title */
-.title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Push elements to the right */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7a59, #ffbe4d);
+}
+
+.brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 .spacer {
   flex: 1;
 }
 
-/* Desktop Navigation */
 .nav-buttons {
   display: flex;
   align-items: center;
-  
+  gap: 0.35rem;
+
   button {
+    color: #dce6ff;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin: 0 12px;
-    transition: all 0.3s ease-in-out;
-    color: white;
-    border: none;
-    background: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.22s ease, color 0.22s ease;
+  }
 
-    &:hover {
-      color: #FFC107; /* Gold hover effect */
-    }
+  button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
 
-    &.active-link {
-      color: #FFC107; /* Gold highlight for active link */
-      border-bottom: 2px solid #FFC107;
-      padding-bottom: 4px;
-    }
+  .active-link {
+    background: rgba(255, 122, 89, 0.2);
+    color: #ffd9c8;
+    border: 1px solid rgba(255, 122, 89, 0.35);
   }
 }
 
-/* Mobile menu button */
 .menu-button {
   display: none;
-  color: white;
+  color: #f2f6ff;
 }
 
-/* SIDENAV */
 .sidenav-container {
   display: none;
 }
 
 .sidenav {
-  width: 260px;
-  height: 100vh;
-  padding-top: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #121826; /* Slightly lighter dark shade */
-  color: white;
-  z-index: 1200;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  width: min(82vw, 300px);
+  padding: 1.2rem 0.9rem 1.4rem;
+  background: #101d35;
+  color: #edf2ff;
+  border-right: 1px solid rgba(255, 255, 255, 0.11);
 }
 
-/* Open Sidebar */
-.sidenav.open {
-  transform: translateX(0);
-}
-
-/* Sidebar Navigation Links */
-.sidenav-links {
+.close-button {
+  margin-left: auto;
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  color: #f2f6ff;
+}
+
+.sidenav-links {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
 
   button {
+    justify-content: flex-start;
     text-align: left;
-    width: 100%;
-    color: white;
-    background: none;
-    font-size: 1rem;
-    padding: 12px;
-    transition: color 0.3s ease-in-out;
+    color: #e4ecff;
+    border-radius: 0.75rem;
+    padding: 0.65rem 0.7rem;
+    font-family: 'Space Grotesk', sans-serif;
+  }
 
-    &:hover {
-      color: #FFC107; /* Gold hover effect */
-    }
+  button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
   }
 }
 
-/* Close button for Sidenav */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-}
+@media (max-width: 840px) {
+  .toolbar {
+    height: 68px;
+    padding: 0 0.8rem;
+  }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+  .brand-name {
+    font-size: 0.93rem;
+  }
+
   .nav-buttons {
-    display: none; /* Hide desktop nav */
+    display: none;
   }
 
   .menu-button {
-    display: block; /* Show menu button */
+    display: inline-flex;
   }
 
   .sidenav-container {
     display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    background: transparent;
+  }
+}
+
+@media (max-width: 430px) {
+  .toolbar {
+    padding: 0 0.55rem;
+  }
+
+  .brand {
+    gap: 0.45rem;
+  }
+
+  .brand-mark {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.72rem;
+  }
+
+  .brand-name {
+    max-width: 145px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.86rem;
   }
 }

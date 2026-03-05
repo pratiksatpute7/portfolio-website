@@ -30,8 +30,4 @@ export class NavbarComponent {
   closeSidenav() {
     this.sidenavOpened = false;
   }
-
-  sidenavClosed() {
-    this.sidenavOpened = false;
-  }
 }

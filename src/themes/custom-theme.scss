@@ -18,6 +18,3 @@ $custom-theme: mat.define-dark-theme((
 
 // Apply the theme globally
 @include mat.all-component-themes($custom-theme);
-body {
-  background-color: #f5f6fa; /* Soft grey */
-}

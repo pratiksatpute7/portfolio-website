@@ -1,22 +1,24 @@
-<section class="work-experience">
-  <div class="work-container">
-
+<section class="work-experience section-shell fade-in">
+  <div class="work-container glass-card">
     <h2 class="section-title">Work Experience</h2>
+    <p class="section-subtitle">Recent roles where I’ve shipped production systems across healthcare, civic tech, and large-scale learning platforms.</p>
+
     <div class="timeline">
-      <div *ngFor="let work of workExperience; let i = index" 
-           class="timeline-item" 
-           [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
-        
-        <div class="timeline-icon" [ngStyle]="{'background-color': work.color}">
+      <article
+        *ngFor="let work of workExperience; let i = index"
+        class="timeline-item"
+        [ngClass]="{ left: i % 2 === 0, right: i % 2 !== 0 }"
+      >
+        <div class="timeline-icon" [ngStyle]="{ 'background-color': work.color }">
           <mat-icon>{{ work.icon }}</mat-icon>
         </div>
-        
+
         <div class="timeline-content">
           <h3>{{ work.role }}</h3>
-          <p class="company">{{ work.company }} ({{ work.duration }})</p>
+          <p class="company">{{ work.company }} · {{ work.duration }}</p>
           <p>{{ work.description }}</p>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

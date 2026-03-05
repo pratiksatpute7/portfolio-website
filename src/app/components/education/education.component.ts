@@ -11,18 +11,18 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class EducationComponent {
   education = [
-    { 
-      degree: "Master of Science, Computer Science", 
-      institution: "Syracuse University", 
-      year: "Aug 2023 - May 2025", 
-      description: "GPA: 3.9 / 4. Relevant coursework includes: Design & Analysis of Algorithms, Intro to Artificial Intelligence, Applied Natural Language Processing, Principles of Operating Systems, Internet of Things - App Development, Principles of Social Media and Data Mining, and Computer Architecture.",
+    {
+      degree: "Master of Science, Computer and Information Sciences",
+      institution: "Syracuse University, New York, USA",
+      year: "Aug 2023 - May 2025",
+      description: "GPA: 3.9 / 4. Focused on algorithms, AI, NLP, operating systems, and scalable software systems.",
       color: "#007acc"
     },
-    { 
-      degree: "Bachelor of Engineering, Computer Engineering", 
-      institution: "University of Mumbai - Rajiv Gandhi Institute of Technology", 
-      year: "Jul 2016 - Oct 2020", 
-      description: "GPA: 3.7 / 4. Focused on software development, data structures, and machine learning concepts. Developed various academic projects including an Asynchronous Interview Analysis tool and a Drowsy Driver Detection System.",
+    {
+      degree: "B.E., Computer Engineering",
+      institution: "University of Mumbai, Mumbai, India",
+      year: "Jul 2016 - Oct 2020",
+      description: "GPA: 3.8 / 4. Strong foundation in software engineering, data structures, and systems programming.",
       color: "#ff9800"
     }
   ];
