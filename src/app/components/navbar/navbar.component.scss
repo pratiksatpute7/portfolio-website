@@ -143,6 +143,11 @@
     inset: 0;
     z-index: 1300;
     background: transparent;
+    pointer-events: none;
+  }
+
+  .sidenav-container.menu-open {
+    pointer-events: auto;
   }
 }
 

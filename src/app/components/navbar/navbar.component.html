@@ -17,7 +17,7 @@
   </button>
 </mat-toolbar>
 
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" [class.menu-open]="sidenavOpened">
   <mat-sidenav class="sidenav" mode="over" [opened]="sidenavOpened" (closedStart)="closeSidenav()">
     <button mat-icon-button (click)="closeSidenav()" class="close-button" aria-label="Close navigation">
       <mat-icon>close</mat-icon>
